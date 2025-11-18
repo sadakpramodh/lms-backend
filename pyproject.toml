@@ -1,0 +1,25 @@
+[project]
+name = "lms-python-backend"
+version = "0.1.0"
+description = "FastAPI reference backend for the LMS frontend"
+requires-python = ">=3.11"
+authors = [{ name = "LMS Team" }]
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.25.0",
+  "python-multipart>=0.0.9",
+  "pydantic[email]>=2.7.0",
+  "python-jose[cryptography]>=3.3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.4.0"
+]
+
+[build-system]
+requires = ["setuptools>=68.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
